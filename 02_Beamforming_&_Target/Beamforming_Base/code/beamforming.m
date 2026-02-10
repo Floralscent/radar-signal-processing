@@ -3,10 +3,10 @@ close all; clear all; clc;
 
 %% Data load #
 %h5 folder direction
-folder_name = 'm3v20'; % h5 폴더 이름 지정
+folder_name = 'az000_data_set'; % h5 폴더 이름 지정
 h5folder = ['./', folder_name]; % ./ 경로 추가
 
-sar = true; %% radar 움직일땐 true 아닐때 false 지정
+
 %% Parameter setting #
 AFI910_Parameter_AIP
 mag_th = 25000; % Maximum threshold < 
@@ -14,7 +14,7 @@ el_cal = 0; % Elevation calibration <<
 z_cal = 0; % ca 
 
 %% Save mat file
-save_name = [folder_name, '_fft']; 
+save_name = [folder_name, '_fftaz60']; 
 
 %% Load file, Preallocation
 
@@ -51,19 +51,7 @@ for file_idx = 1:file_num
     filename  = D(file_idx).name;  % D struct 들어가면 name / folder/ date /byte / datenum 등의 정보가 따로 있어서
     h5filpath =[h5folder,'\',filename];
     
-    % sar 속도 파라미터
-    vel_param = 0;
-    if (sar)
-        dir  = endsWith(filename,'l.h5');
-        if dir == 0
-            dir = -1;
-        end
-        
-        vel_param = extract(filename, digitsPattern); 
-        vel_param = vel_param{2};
-        vel_param = str2double(vel_param)*dir;
-    end
-
+    
     name = extractBefore(filename,".");
     %
 
@@ -135,7 +123,7 @@ for file_idx = 1:file_num
                 % y 좌표 변환
                 point_cloud.sr_data{scan_idx,file_idx}(2,pnt_idx-skip_cnt) = point_cloud.sr_rng{scan_idx,file_idx}(pnt_idx-skip_cnt)*...
                     cos(deg2rad(point_cloud.sr_el{scan_idx,file_idx}(pnt_idx-skip_cnt)))*...
-                    sin(deg2rad(point_cloud.sr_az{scan_idx,file_idx}(pnt_idx-skip_cnt)))+((1e-4)*vel_param*scan_idx); 
+                    sin(deg2rad(point_cloud.sr_az{scan_idx,file_idx}(pnt_idx-skip_cnt))); 
                 % z 좌표 변환
                 point_cloud.sr_data{scan_idx,file_idx}(3,pnt_idx-skip_cnt) = point_cloud.sr_rng{scan_idx,file_idx}(pnt_idx-skip_cnt)*...
                     sin(deg2rad(point_cloud.sr_el{scan_idx,file_idx}(pnt_idx-skip_cnt)))+z_cal;
@@ -187,7 +175,7 @@ for file_idx = 1:file_num
 
                 point_cloud.mr_data{scan_idx,file_idx}(2,pnt_idx-skip_cnt) = point_cloud.mr_rng{scan_idx,file_idx}(pnt_idx-skip_cnt)*...
                     cos(deg2rad(point_cloud.mr_el{scan_idx,file_idx}(pnt_idx-skip_cnt)))*...
-                    sin(deg2rad(point_cloud.mr_az{scan_idx,file_idx}(pnt_idx-skip_cnt)))+((1e-4)*vel_param*scan_idx);
+                    sin(deg2rad(point_cloud.mr_az{scan_idx,file_idx}(pnt_idx-skip_cnt)));
 
                 point_cloud.mr_data{scan_idx,file_idx}(3,pnt_idx-skip_cnt) = point_cloud.mr_rng{scan_idx,file_idx}(pnt_idx-skip_cnt)*...
                     sin(deg2rad(point_cloud.mr_el{scan_idx,file_idx}(pnt_idx-skip_cnt)))+z_cal;
@@ -202,13 +190,25 @@ for file_idx = 1:file_num
         point_cloud.mix_data{scan_idx,file_idx} = zeros(3,sr_end+mr_end);
         point_cloud.mix_data{scan_idx,file_idx}(:,1:sr_end) = point_cloud.sr_data{scan_idx,file_idx}(:,:);
         point_cloud.mix_data{scan_idx,file_idx}(:,sr_end+1:sr_end+mr_end) = point_cloud.mr_data{scan_idx,file_idx}(:,:);
+        
+        point_cloud.mix_az{scan_idx,file_idx} = zeros(1,sr_end+mr_end);
+        point_cloud.mix_el{scan_idx,file_idx} = zeros(1,sr_end+mr_end);
+        
+        point_cloud.mix_az{scan_idx,file_idx}(:,1:sr_end) = point_cloud.sr_az{scan_idx,file_idx}(:,:);
+        point_cloud.mix_az{scan_idx,file_idx}(:,sr_end+1:sr_end+mr_end) = point_cloud.mr_az{scan_idx,file_idx}(:,:);
+        point_cloud.mix_el{scan_idx,file_idx}(:,1:sr_end) = point_cloud.sr_el{scan_idx,file_idx}(:,:);
+        point_cloud.mix_el{scan_idx,file_idx}(:,sr_end+1:sr_end+mr_end) = point_cloud.mr_el{scan_idx,file_idx}(:,:);
 
         mix_mag = zeros(1, sr_end + mr_end);
         mix_mag(:, 1:sr_end) = point_cloud.sr_mag{scan_idx, file_idx}(:,:);
         mix_mag(:, sr_end + 1:sr_end + mr_end) = point_cloud.mr_mag{scan_idx, file_idx}(:,:);
+
+        mix_rng = zeros(1, sr_end + mr_end);
+        mix_rng(:, 1:sr_end) = point_cloud.sr_rng{scan_idx, file_idx}(:,:);
+        mix_rng(:, sr_end + 1:sr_end + mr_end) = point_cloud.mr_rng{scan_idx, file_idx}(:,:);
         
         point_cloud.mix_data{scan_idx, file_idx} = [point_cloud.mix_data{scan_idx, file_idx}; mix_mag];
-
+        point_cloud.mix_rng{scan_idx, file_idx} = mix_rng;
         point_cloud.mix_cnt(scan_idx,file_idx)=sr_end+mr_end;
     end
 % x,y,z, mag, 
