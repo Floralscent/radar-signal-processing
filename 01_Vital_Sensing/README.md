@@ -14,11 +14,11 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 <table style="width: 100%; text-align: center;">
   <tr>
     <td style="width: 50%; border: none;">
-      <img src="./01_Breathing/img/Experimental_setup.png" width="100%"/>
+      <img src="./Breathing/img/Experimental_setup.png" width="100%"/>
       <br/><sub>호흡 실험 환경</sub>
     </td>
     <td style="width: 50%; border: none;">
-      <img src="./01_Breathing/img/radar_parameter.png" width="100%"/>
+      <img src="./Breathing/img/radar_parameter.png" width="100%"/>
       <br/><sub>레이더 파라미터 설정</sub>
     </td>
   </tr>
@@ -27,19 +27,19 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 <table style="width: 100%; text-align: center;">
   <tr>
     <td style="width: 25%; border: none;">
-      <img src="./01_Breathing/img/Phase_Map.jpg" width="100%"/>
+      <img src="./Breathing/img/Phase_Map.jpg" width="100%"/>
       <br/><sub>전체 페이즈 맵</sub>
     </td>
     <td style="width: 25%; border: none;">
-      <img src="./01_Breathing/img/Range_Spectrogram.png" width="100%"/>
+      <img src="./Breathing/img/Range_Spectrogram.png" width="100%"/>
       <br/><sub>레인지 스펙트로그램</sub>
     </td>
     <td style="width: 25%; border: none;">
-      <img src="./01_Breathing/img/Phase_of_Range_Bin32.jpg" width="100%"/>
+      <img src="./Breathing/img/Phase_of_Range_Bin32.jpg" width="100%"/>
       <br/><sub>타겟 위치(32번 Bin) 페이즈</sub>
     </td>
     <td style="width: 25%; border: none;">
-      <img src="./01_Breathing/img/Respiration_Rate_Radar_Ground_Truth.jpg" width="100%"/>
+      <img src="./Breathing/img/Respiration_Rate_Radar_Ground_Truth.jpg" width="100%"/>
       <br/><sub>최종 산출 호흡률(BPM)</sub>
     </td>
   </tr>
@@ -61,26 +61,27 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 * Range-Spectrogram (1st/2nd FFT): 신호 처리 단계별 주파수 분석 결과
 * Range-Velocity Map: 시간에 따른 타겟의 속도 변화 추적
 
+
+
+<img src="./Motion_Detection/img/m2.png" width="100%"/>
+<br/><sub>레이더 파라미터</sub>
+
 <table style="width: 100%; text-align: center;">
   <tr>
-    <td style="width: 20%; border: none;">
-      <img src="./02_Motion_Detection/img/m1.png" width="100%"/>
+    <td style="width: 25%; border: none;">
+      <img src="./Motion_Detection/img/m1.png" width="100%"/>
       <br/><sub>도플러 맵</sub>
     </td>
-    <td style="width: 20%; border: none;">
-      <img src="./02_Motion_Detection/img/m2.png" width="100%"/>
-      <br/><sub>레이더 파라미터</sub>
-    </td>
-    <td style="width: 20%; border: none;">
-      <img src="./02_Motion_Detection/img/m3.png" width="100%"/>
+    <td style="width: 25%; border: none;">
+      <img src="./Motion_Detection/img/m3.png" width="100%"/>
       <br/><sub>1차 FFT 결과</sub>
     </td>
-    <td style="width: 20%; border: none;">
-      <img src="./02_Motion_Detection/img/m4.png" width="100%"/>
+    <td style="width: 25%; border: none;">
+      <img src="./Motion_Detection/img/m4.png" width="100%"/>
       <br/><sub>2차 FFT 결과</sub>
     </td>
-    <td style="width: 20%; border: none;">
-      <img src="./02_Motion_Detection/img/m5.png" width="100%"/>
+    <td style="width: 25%; border: none;">
+      <img src="./Motion_Detection/img/m5.png" width="100%"/>
       <br/><sub>레인지-벨로시티 맵</sub>
     </td>
   </tr>
