@@ -14,19 +14,20 @@
 ### 결과 (Experimental Results)
 * **Azimuth FOV**: +- 45도
 * **신규 레이더 데이터 처리 코드 및 빔포밍 코드 작성 성공**
+* **표준 파이프라인 구축**: 신규 레이더 운용을 위한 신호 처리 표준 파이프라인을 구축하여 연구실 자산화에 기여했습니다.
 
 
-<table style="width: 100%;">
+<table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td align="center" style="width: 70%; border: none; padding: 10px;">
-      <img src="./Beamforming_Base/img/Azimuth Histogram (PDF).jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+    <td align="center" style="width: 50%; border: none; vertical-align: middle; padding: 10px;">
+      <img src="./Beamforming_Base/img/Azimuth Histogram (PDF).jpg" height="250px" style="object-fit: contain;"/>
       <br/><br/>
-      <strong style="font-size: 1.2em;">아지무스 검증 결과 1</strong>
+      <strong style="font-size: 1.15em;">아지무스 검증 결과 1</strong>
     </td>
-    <td align="center" style="width: 30%; border: none; padding: 10px;">
-      <img src="./Beamforming_Base/img/FOV_test.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+    <td align="center" style="width: 50%; border: none; vertical-align: middle; padding: 10px;">
+      <img src="./Beamforming_Base/img/FOV_test.jpg" height="250px" style="object-fit: contain;"/>
       <br/><br/>
-      <strong style="font-size: 1.2em;">아지무스 검증 결과 2</strong>
+      <strong style="font-size: 1.15em;">아지무스 검증 결과 2</strong>
     </td>
   </tr>
 </table>
