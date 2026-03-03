@@ -139,12 +139,12 @@
 
 <tr>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Human_Target_SAR\img\layout1" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+      <img src="./Human_Target_SAR\img\layout1.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">SAR 구동을 위한 회로도</strong>
     </td>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Human_Target_SAR\img\layout2" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+      <img src="./Human_Target_SAR\img\layout2.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">리니어 스테이지 (790mm)</strong>
     </td>
