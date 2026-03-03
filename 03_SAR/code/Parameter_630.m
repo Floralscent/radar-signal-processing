@@ -10,9 +10,9 @@ maxRangebin = 48;
 anglemin = -45;         % Azimuth angle minimum
 anglemax = 45;          % Azimuth angle maximum
 BW = 3e9;             % Bandwidth
-freq2rang = linspace(0, 3e6/2, Nsamples/2+1);
+freq2rang = linspace(0, 1e6/2, Nsamples/2+1);
 freq2rang = freq2rang(2:end);
-freq2rang = 256 * (1/(3e6)) * (3e8) / (2*BW) * freq2rang;
+freq2rang = 256 * (1/(1e6)) * (3e8) / (2*BW) * freq2rang;
 
 % Phase calibration
 gPhaseCal.real = single([1.0000, -0.0756, 0.8994, 0.2376, -0.9589, 0.4933, -0.9764, -0.0705]);

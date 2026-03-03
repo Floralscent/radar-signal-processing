@@ -3,7 +3,8 @@ clear; clc; close all;
 tic;
 
 %% Paraam Load
-Parameter_630; 
+% Parameter_630;
+Copy_of_Parameter_630
 gPhaseCal_complex = gPhaseCal_complex(:); 
 
 %% Path & File Setting
@@ -18,7 +19,7 @@ T_scan = 0.1;
 platform_axis = 'x';   %
 
 % Target Range(분석할 거리 범위) >2nd fft로 확인할것 
-range_min = 2.9;        
+range_min = 2.90;        
 range_max = 3.4;        
 doppler_half_bins = 2;  
 
@@ -126,15 +127,36 @@ for file_idx = 1:file_num
     end
     
     %% Combined Result
+    % 시각화용 << 리니어 스테이지 790mm 에 레이더와 타겟거리 약3m(3.1m)
+    target_vis_min = 3.05;
+    target_vis_max = 3.25;
     
-    if numel(rng_bins) > 1
-        combined_img = sum(abs(sar_accum).^2, 3);
-        figure('Name', 'Final Combined SAR Result', 'NumberTitle', 'off');
+    % rng_bins 내에서 해당 범위 추출
+    combined_rng_idx = find(freq2rang(rng_bins) >= target_vis_min & freq2rang(rng_bins) <= target_vis_max);
+    
+    if ~isempty(combined_rng_idx)
+        combined_img = sum(abs(sar_accum(:, :, combined_rng_idx)).^2, 3);
+        
+        figure('Name', 'Target Focused SAR Result', 'NumberTitle', 'off');
         imagesc(azi_ang, ele_ang, combined_img.');
         axis xy; colorbar; colormap(jet);
         xlabel('Azimuth (deg)'); ylabel('Elevation (deg)');
-        title(sprintf('Combined SAR (%.2f - %.2f m)', range_min, range_max));
+        
+        title(sprintf('Combined SAR (%.2f - %.2f m)', target_vis_min, target_vis_max));
     end
-end
 
-toc;
+
+    % %% Combined Result
+    % 
+    % if numel(rng_bins) > 1
+    %     combined_img = sum(abs(sar_accum).^2, 3);
+    %     figure('Name', 'Final Combined SAR Result', 'NumberTitle', 'off');
+    %     imagesc(azi_ang, ele_ang, combined_img.');
+    %     axis xy; colorbar; colormap(jet);
+    %     xlabel('Azimuth (deg)'); ylabel('Elevation (deg)');
+    %     title(sprintf('Combined SAR (%.2f - %.2f m)', range_min, range_max));
+    % end
+
+    
+end
+toc

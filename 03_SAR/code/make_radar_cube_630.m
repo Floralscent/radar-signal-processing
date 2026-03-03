@@ -4,12 +4,12 @@ tic;
 
 %% Data load #
 %h5 folder direction
-folder_name = '20rtol'; % h5 폴더 
-h5folder = ['./', folder_name]; % ./ 경로 추가
+folder_name = '20rtol'; % h5 폴더, 파일에 r이 있을경우와 l이 있을 경우 방향이 다르므로 주의  
+h5folder = ['./', folder_name]; % ./ 경로 추가 
 
 %% Parameter setting #
-Parameter_630
-
+Copy_of_Parameter_630
+% Parameter_630
 %% Save mat file
 save_name = [folder_name, '_fft']; 
 
@@ -108,4 +108,26 @@ save([h5folder, '\', name, '_fft.mat'], 'scan_data');
 end % 파일루프 끝
 close(f)
 time = toc
-circshift
+
+%% 임의 채널 하나 고르고 거리 확인해보기 >> 3.1~3.2까지
+% ch4_range_time = []; % [Range_bin x Scan_idx]
+% 
+% for scan_idx = 1:scan_max
+% 
+%     ch4_fft1 = abs(scan_data(scan_idx).channel_data(4).fft1);
+%     ch4_range_time(:, scan_idx) = mean(ch4_fft1, 2); 
+% end
+% 
+% % 시각화
+% figure('Name', 'Channel 4 Range-Time Spectrogram', 'Color', 'w');
+% imagesc(1:scan_max, freq2rang, 10*log10(ch4_range_time)); % 시간축 변경없이 모든 스캔 - 거리 확인
+% xlabel('Scan Index (Time)'); 
+% ylabel('Range [m]');
+% ax = gca; ax.YDir = 'normal';
+% title('Channel 4: Range-Time');
+% colorbar;
+% colormap(jet);
+% grid on;
+% 
+% 
+% ylim([0 10]); % 관측 범위 설정
