@@ -1,6 +1,6 @@
 # 03. Industrial SAR Imaging & Phase Calibration
 
-본 프로젝트는 01(https://github.com/Floralscent/radar-signal-processing/tree/main/01_Vital_Sensing)과 02(https://github.com/Floralscent/radar-signal-processing/tree/main/02_Beamforming_Target)의 프로젝트들을 통해 배운 지식을 모두 통합하여 다시 RAW 데이터 제공하는 61GHz MIMO 레이더를 활용하여 철판 타겟에 대한 고해상도 SAR(Synthetic Aperture Radar) 이미징을 수행하고, 정밀 위상 보정(Phase Calibration)을 통해 이미지 선명도를 극대화한 연구 기록입니다.
+본 프로젝트는 ![01](https://github.com/Floralscent/radar-signal-processing/tree/main/01_Vital_Sensing)과 ![02](https://github.com/Floralscent/radar-signal-processing/tree/main/02_Beamforming_Target)의 프로젝트들을 통해 배운 지식을 모두 통합하여 다시 RAW 데이터 제공하는 61GHz MIMO 레이더를 활용하여 철판 타겟에 대한 고해상도 SAR(Synthetic Aperture Radar) 이미징을 수행하고, 정밀 위상 보정(Phase Calibration)을 통해 이미지 선명도를 극대화한 연구 기록입니다.
 
 ## 1. 주요 알고리즘 및 구현 (Key Implementation)
 
@@ -10,7 +10,7 @@
 * MIMO Beamforming & Phase Calibration
     * 8개 채널의 복소 위상 불균형을 해결하기 위해 고정 위상 보정값(`gPhaseCal_complex`)을 적용하여 빔포밍 정밀도 향상
     * Steering Vector 연산을 통해 Azimuth($\pm 45^\circ$)와 Elevation($\pm 15^\circ$)에 대한 3차원 공간 데이터 복원
-    * 01 프로젝트들의 1채널 raw 데이터 처리(https://github.com/Floralscent/radar-signal-processing/tree/main/01_Vital_Sensing) + 02 프로젝트들의 SAR를 고도화((https://github.com/Floralscent/radar-signal-processing/tree/main/02_Beamforming_Target) 시켜 RAW 데이터로 SAR를 구현
+    * 01 프로젝트들의 1채널 raw 데이터 처리 + 02 프로젝트들의 SAR를 고도화 시킨 경험을 바탕으로 RAW 데이터로 SAR를 구현
 * Slant Range Correction SAR
     * 레이더의 실제 물리적 위치와 측정 거리 사이의 오차($\Delta R$)를 실시간 보정하는 위상 보정(`phase_corr`) 알고리즘 구현
     * Coherent vs Incoherent Sum: 위상 동기 누적(Coherent) 방식을 적용하여 타겟의 초점(Focusing) 성능을 에너지 누적 방식 대비 대폭 개선
@@ -30,12 +30,12 @@
 <table style="width: 100%;">
   <tr>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./SAR/img/combine_sar.png" width="100%" style="max-height: 250px; object-fit: contain;"/>
+      <img src="./img/combined_sar.jpg" width="100%" style="max-height: 250px; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.1em;">위상 보정 후 누적 SAR 데이터</strong>
     </td>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./SAR/img/coherent_incoherent.gif" width="100%" style="max-height: 250px; object-fit: contain;"/>
+      <img src="./img/coherent_incoherent.gif" width="100%" style="max-height: 250px; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.1em;">고해상도 SAR 형상 복원 과정 시각화</strong>
     </td>
@@ -50,12 +50,12 @@
 
 <tr>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Human_Target_SAR\img\layout.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+      <img src="https://raw.githubusercontent.com/Floralscent/radar-signal-processing/main/02_Beamforming_Target/Human_Target_SAR/img/layout.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">SAR 구동을 위한 회로도</strong>
     </td>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Human_Target_SAR\img\layout2.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+      <img src="https://raw.githubusercontent.com/Floralscent/radar-signal-processing/main/02_Beamforming_Target/Human_Target_SAR/img/layout2.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">리니어 스테이지 (790mm)</strong>
     </td>
@@ -63,7 +63,7 @@
 
 <table>
 <td align="center" style="width: 50%; border: none; text-align: center; vertical-align: middle; padding: 10px;">
-      <img src="./Motion_Detection/img/radar_parameter.png" width="100%" style="max-height: 250px; object-fit: contain;"/>
+      <img src="./img/radar_parameter.png" width="100%" style="max-height: 250px; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.1em;">움직임 파라미터</strong>
     </td>
