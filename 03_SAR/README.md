@@ -47,25 +47,21 @@
 
 본 실험들에 적용된 세부 시스템 파라미터 설정값입니다.
 
-
+<table style="width: 100%;">
 <tr>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
+    <td align="center" style="width: 33.33%; border: none; padding: 10px;">
       <img src="https://raw.githubusercontent.com/Floralscent/radar-signal-processing/main/02_Beamforming_Target/Human_Target_SAR/img/layout.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">SAR 구동을 위한 회로도</strong>
     </td>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
+    <td align="center" style="width: 33.33%; border: none; padding: 10px;">
       <img src="https://raw.githubusercontent.com/Floralscent/radar-signal-processing/main/02_Beamforming_Target/Human_Target_SAR/img/layout2.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">리니어 스테이지 (790mm)</strong>
     </td>
-</tr>
-
-<table>
-<td align="center" style="width: 50%; border: none; text-align: center; vertical-align: middle; padding: 10px;">
+    <td align="center" style="width: 33.33%; border: none; text-align: center; vertical-align: middle; padding: 10px;">
       <img src="./img/radar_parameter.png" width="100%" style="max-height: 250px; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.1em;">움직임 파라미터</strong>
     </td>
-  </tr>
 </table>
