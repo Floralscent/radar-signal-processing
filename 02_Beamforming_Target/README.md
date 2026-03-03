@@ -63,12 +63,17 @@
 
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td align="center" style="width: 50%; border: none; vertical-align: middle; padding: 10px;">
+    <td align="center" style="width: 33.33%; border: none; vertical-align: middle; padding: 10px;">
+      <img src="./Human_Target_SAR/img/befor_after.jpg" height="250px" style="object-fit: contain;"/>
+      <br/><br/>
+      <strong style="font-size: 1.15em;">DBSCAN 적용 전/후 비교</strong>
+    </td>
+    <td align="center" style="width: 33.33%; border: none; vertical-align: middle; padding: 10px;">
       <img src="./Human_Target_SAR/img/all_data.jpg" height="250px" style="object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.15em;">DBSCAN 적용 후 Point Cloud</strong>
     </td>
-    <td align="center" style="width: 50%; border: none; vertical-align: middle; padding: 10px;">
+    <td align="center" style="width: 33.33%; border: none; vertical-align: middle; padding: 10px;">
       <img src="./Human_Target_SAR/img/DBSCAN_data.jpg" height="250px" style="object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.15em;">DBSCAN 적용 후 Point Cloud</strong>
