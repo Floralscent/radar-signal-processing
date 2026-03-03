@@ -128,11 +128,9 @@
 
 </table>
 
-<tr>
-    <td align="center" style="width: 100%; border: none; padding: 10px;">
+
+<div align="center" style="width: 100%; border: none; padding: 10px;">
       <img src="./Beamforming_Base/img/radar_detail.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">레이더 파라미터(실험 공통)</strong>
-    </td>
-  </tr>
-<tr>
+</div>
