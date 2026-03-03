@@ -102,24 +102,7 @@
 
 <table style="width: 100%;">
   <tr>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Beamforming_Base/img/data1.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><br/>
-      <strong style="font-size: 1.2em;">데이터 처리 프로세스 1</strong>
-    </td>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Beamforming_Base/img/data2.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><br/>
-      <strong style="font-size: 1.2em;">데이터 처리 프로세스 2</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Beamforming_Base/img/data3.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><br/>
-      <strong style="font-size: 1.2em;">데이터 처리 프로세스 3</strong>
-    </td>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
+    <td align="center" style="width: 100%; border: none; padding: 10px;">
       <img src="./Beamforming_Base/img/radar_detail.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">레이더 파라미터(실험 공통)</strong>
