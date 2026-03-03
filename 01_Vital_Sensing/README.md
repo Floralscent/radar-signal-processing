@@ -7,36 +7,23 @@
 FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 미세한 움직임을 추출하고, 이를 통해 실시간 호흡률을 산출합니다.
 
 ### 주요 알고리즘
-* Phase Extraction: 타겟 빈(Bin)에서의 위상 변화 추출
+* Phase Extraction: 타겟 빈(Bin)에서의 위상 변화 추출 - 1m 지점
 * Phase Unwrapping: 위상 불연속성 제거를 통한 연속 변위 데이터 확보
 * Bandpass Filtering: 호흡 주파수 대역(0.1Hz ~ 0.5Hz) 신호 정제
 
 ### 결과 (Experimental Results)
-* 상관계수(Correlation)**: 0.84
-* 평균 오차(MSE)**: 0.2183
-
-<table style="width: 100%; text-align: center;">
-  <tr>
-    <td style="width: 50%; border: none;">
-      <img src="./Breathing/img/Experimental_setup.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>호흡 실험 환경</sub>
-    </td>
-    <td style="width: 50%; border: none;">
-      <img src="./Breathing/img/radar_parameter.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>레이더 파라미터 설정</sub>
-    </td>
-  </tr>
-</table>
+* **상관계수(Correlation)**: 0.84
+* **평균 오차(MSE)**: 0.2183
 
 <table style="width: 100%; text-align: center;">
   <tr>
     <td style="width: 50%; border: none;">
       <img src="./Breathing/img/Phase_Map.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>전체 페이즈 맵</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">전체 페이즈 맵</span>
     </td>
     <td style="width: 50%; border: none;">
       <img src="./Breathing/img/Range_Spectrogram.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>레인지 스펙트로그램</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">레인지 스펙트로그램</span>
     </td>
   </tr>
 </table>
@@ -45,19 +32,20 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
   <tr>
     <td style="width: 50%; border: none;">
       <img src="./Breathing/img/Phase_of_Range_Bin32.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>타겟 위치(32번 Bin) 페이즈</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">타겟 위치(32번 Bin) 페이즈</span>
     </td>
     <td style="width: 50%; border: none;">
       <img src="./Breathing/img/Respiration_Rate_Radar_Ground_Truth.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>최종 산출 호흡률(BPM)</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">최종 산출 호흡률(BPM)</span>
     </td>
   </tr>
 </table>
+
 ---
 
 ## 2. Motion Detection (움직임 측정)
 
-타겟의 거리와 속도 변화를 실시간으로 탐지하여 움직임의 패턴과 강도를 분석합니다.
+타겟의 거리와 속도 변화를 실시간으로 탐지하여 움직임의 패턴과 강도를 분석합니다. 
 
 ### 주요 알고리즘
 * 2D FFT: 거리(Range) 및 속도(Doppler) 정보 동시 추출
@@ -70,19 +58,15 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 ### 결과 (Experimental Results)
 * 레이더 시스템 데이터 구조에 대한 학습
 
-<img src="./Motion_Detection/img/radar_parameter.png" width="100%"/>
-<br/><sub>레이더 파라미터</sub>
-
-
 <table style="width: 100%; text-align: center;">
   <tr>
     <td style="width: 50%; border: none;">
       <img src="./Motion_Detection/img/Doppler_map.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>도플러 맵</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">도플러 맵</span>
     </td>
     <td style="width: 50%; border: none;">
       <img src="./Motion_Detection/img/Range_spectrogram_1st_FFT.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>1차 FFT 결과</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">1차 FFT 결과</span>
     </td>
   </tr>
 </table>
@@ -91,15 +75,28 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
   <tr>
     <td style="width: 50%; border: none;">
       <img src="./Motion_Detection/img/Range_spectrogram_2nd_FFT.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>2차 FFT 결과</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">2차 FFT 결과</span>
     </td>
     <td style="width: 50%; border: none;">
       <img src="./Motion_Detection/img/Range_velocity_map.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
-      <br/><sub>레인지-벨로시티 맵</sub>
+      <br/><span style="font-size: 1.15em; font-weight: bold; display: block; margin-top: 10px;">레인지-벨로시티 맵</span>
     </td>
   </tr>
 </table>
 
-
 ---
 
+## 레이더 실험 환경 및 파라미터 설정
+
+<table style="width: 100%; text-align: center;">
+  <tr>
+    <td style="width: 33%; border: none; vertical-align: middle;">
+      <img src="./Breathing/img/radar_parameter.png" width="100%" style="max-height: 250px; object-fit: contain;"/>
+      <br/><span style="font-size: 1.1em; font-weight: bold; display: block; margin-top: 10px;">호흡 파라미터</span>
+    </td>
+    <td style="width: 33%; border: none; vertical-align: middle;">
+      <img src="./Motion_Detection/img/radar_parameter.png" width="100%" style="max-height: 250px; object-fit: contain;"/>
+      <br/><span style="font-size: 1.1em; font-weight: bold; display: block; margin-top: 10px;">움직임 파라미터</span>
+    </td>
+  </tr>
+</table>
