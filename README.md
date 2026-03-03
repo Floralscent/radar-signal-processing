@@ -39,7 +39,7 @@
     * 고정 타겟(철판 등) 및 산업용 환경에서의 SAR 스캔 시나리오 구축
     * 수집된 PointCloud 데이터가 아닌 Raw 데이터의 신호 처리 및 영상 복원(Imaging)
 
-* 상세 보기: [./03_Industrial_SAR](./03_Industrial_SAR)
+* 상세 보기: [./03_SAR](./03_SAR)
 
 ---
 
