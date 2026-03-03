@@ -18,12 +18,12 @@
 
 <table style="width: 100%;">
   <tr>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
+    <td align="center" style="width: 70%; border: none; padding: 10px;">
       <img src="./Beamforming_Base/img/Azimuth Histogram (PDF).jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">아지무스 검증 결과 1</strong>
     </td>
-    <td align="center" style="width: 50%; border: none; padding: 10px;">
+    <td align="center" style="width: 30%; border: none; padding: 10px;">
       <img src="./Beamforming_Base/img/FOV_test.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">아지무스 검증 결과 2</strong>
@@ -82,7 +82,7 @@
       <strong style="font-size: 1.2em;">FOV 검증 실험 환경</strong>
     </td>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Humman_Taget_SAR/img/Experimental_Setup.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+      <img src="./Human_Target_SAR\img\Experimental_Setup.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">인간 타겟 SAR 실험 환경</strong>
     </td>
