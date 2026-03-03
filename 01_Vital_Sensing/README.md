@@ -18,11 +18,11 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 <table style="width: 100%; text-align: center;">
   <tr>
     <td style="width: 50%; border: none;">
-      <img src="./Breathing/img/Experimental_setup.png" width="100%"/>
+      <img src="./Breathing/img/Experimental_setup.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>호흡 실험 환경</sub>
     </td>
     <td style="width: 50%; border: none;">
-      <img src="./Breathing/img/radar_parameter.png" width="100%"/>
+      <img src="./Breathing/img/radar_parameter.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>레이더 파라미터 설정</sub>
     </td>
   </tr>
@@ -30,20 +30,25 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 
 <table style="width: 100%; text-align: center;">
   <tr>
-    <td style="width: 25%; border: none;">
-      <img src="./Breathing/img/Phase_Map.jpg" width="100%"/>
+    <td style="width: 50%; border: none;">
+      <img src="./Breathing/img/Phase_Map.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>전체 페이즈 맵</sub>
     </td>
-    <td style="width: 25%; border: none;">
-      <img src="./Breathing/img/Range_Spectrogram.png" width="100%"/>
+    <td style="width: 50%; border: none;">
+      <img src="./Breathing/img/Range_Spectrogram.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>레인지 스펙트로그램</sub>
     </td>
-    <td style="width: 25%; border: none;">
-      <img src="./Breathing/img/Phase_of_Range_Bin32.jpg" width="100%"/>
+  </tr>
+</table>
+
+<table style="width: 100%; text-align: center;">
+  <tr>
+    <td style="width: 50%; border: none;">
+      <img src="./Breathing/img/Phase_of_Range_Bin32.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>타겟 위치(32번 Bin) 페이즈</sub>
     </td>
-    <td style="width: 25%; border: none;">
-      <img src="./Breathing/img/Respiration_Rate_Radar_Ground_Truth.jpg" width="100%"/>
+    <td style="width: 50%; border: none;">
+      <img src="./Breathing/img/Respiration_Rate_Radar_Ground_Truth.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>최종 산출 호흡률(BPM)</sub>
     </td>
   </tr>
@@ -68,26 +73,33 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부의 �
 <img src="./Motion_Detection/img/radar_parameter.png" width="100%"/>
 <br/><sub>레이더 파라미터</sub>
 
+
 <table style="width: 100%; text-align: center;">
   <tr>
-    <td style="width: 25%; border: none;">
-      <img src="./Motion_Detection/img/Doppler_map.png" width="100%"/>
+    <td style="width: 50%; border: none;">
+      <img src="./Motion_Detection/img/Doppler_map.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>도플러 맵</sub>
     </td>
-    <td style="width: 25%; border: none;">
-      <img src="./Motion_Detection/img/Range_spectrogram_1st_FFT" width="100%"/>
+    <td style="width: 50%; border: none;">
+      <img src="./Motion_Detection/img/Range_spectrogram_1st_FFT.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>1차 FFT 결과</sub>
     </td>
-    <td style="width: 25%; border: none;">
-      <img src="./Motion_Detection/img/Range_spectrogram_2nd_FFT" width="100%"/>
+  </tr>
+</table>
+
+<table style="width: 100%; text-align: center;">
+  <tr>
+    <td style="width: 50%; border: none;">
+      <img src="./Motion_Detection/img/Range_spectrogram_2nd_FFT.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>2차 FFT 결과</sub>
     </td>
-    <td style="width: 25%; border: none;">
-      <img src="./Motion_Detection/img/Range_velocity_map.jpg" width="100%"/>
+    <td style="width: 50%; border: none;">
+      <img src="./Motion_Detection/img/Range_velocity_map.jpg" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><sub>레인지-벨로시티 맵</sub>
     </td>
   </tr>
 </table>
+
 
 ---
 
