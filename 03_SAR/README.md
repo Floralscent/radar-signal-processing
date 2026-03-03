@@ -1,6 +1,6 @@
 # 03. Industrial SAR Imaging & Phase Calibration
 
-본 프로젝트는 ![01](https://github.com/Floralscent/radar-signal-processing/tree/main/01_Vital_Sensing)과 ![02](https://github.com/Floralscent/radar-signal-processing/tree/main/02_Beamforming_Target)의 프로젝트들을 통해 배운 지식을 모두 통합하여 다시 RAW 데이터 제공하는 61GHz MIMO 레이더를 활용하여 철판 타겟에 대한 고해상도 SAR(Synthetic Aperture Radar) 이미징을 수행하고, 정밀 위상 보정(Phase Calibration)을 통해 이미지 선명도를 극대화한 연구 기록입니다.
+본 프로젝트는 [01](https://github.com/Floralscent/radar-signal-processing/tree/main/01_Vital_Sensing)과 [02](https://github.com/Floralscent/radar-signal-processing/tree/main/02_Beamforming_Target)의 프로젝트들을 통해 배운 지식을 모두 통합하여 다시 RAW 데이터 제공하는 61GHz MIMO 레이더를 활용하여 철판 타겟에 대한 고해상도 SAR(Synthetic Aperture Radar) 이미징을 수행하고, 정밀 위상 보정(Phase Calibration)을 통해 이미지 선명도를 극대화한 연구 기록입니다.
 
 ## 1. 주요 알고리즘 및 구현 (Key Implementation)
 
