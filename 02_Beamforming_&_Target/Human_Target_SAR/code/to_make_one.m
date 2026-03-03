@@ -2,7 +2,7 @@ clear all;
 close all;
 
 % 데이터가 저장된 폴더 설정
-matfolder = './data_HJ/data';   % 실제 데이터 폴더 경로로 수정하세요.
+matfolder = './data_HJ/data';   % 실제 데이터 폴더
 
 % 컬러맵 설정
 cmp = parula;          % 기본 MATLAB 컬러맵인 Parula 사용
@@ -10,7 +10,7 @@ cmp = flipud(cmp);     % 컬러맵을 상하 반전
 colormap(cmp);         % 반전된 컬러맵을 적용
 % 
 % % 결과를 저장할 폴더 경로 설정
-% sv_path = './new/';    % 결과를 저장할 폴더 경로로 수정하세요.
+% sv_path = './new/';    %
 
 % 데이터 처리할 파일 목록 가져오기
 D = dir(fullfile(matfolder, '*.mat'));   % 지정된 폴더에서 .mat 파일 목록 가져오기

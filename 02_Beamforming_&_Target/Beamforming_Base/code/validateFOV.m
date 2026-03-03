@@ -25,9 +25,11 @@ for file_idx = 1:file_num
         y = xyz(2,:);
         z = xyz(3,:);
         
-        rng = sqrt(x.^2 + y.^2 + z.^2); %좌표로 거리와 각도 역산
-        az  = atan2d(y,x);
-        el  = atan2d(z, sqrt(x.^2 + y.^2));
+       
+        
+        az = point_cloud.mix_az{scan_idx,file_idx};
+        el = point_cloud.mix_el{scan_idx,file_idx};
+        
         
         az_all  = [az_all  az];
         el_all  = [el_all  el];
@@ -53,14 +55,6 @@ FOV.rng.all = rng_all;
 FOV.mag.all = mag_all;
 
 %% 시각화
-figure;
-scatter(FOV.az.all, FOV.rng.all, 6, FOV.mag.all,'filled'); %거리-azi 별 점
-grid on; colorbar;
-xlabel('Azimuth [deg]');
-ylabel('Range [m]');
-title('MIX Azimuth-Range FOV');
-xline(FOV.az.core(1),'r--','5%');
-xline(FOV.az.core(2),'r--','95%');
 
 figure;
 histogram(FOV.az.all,100,'Normalization','pdf'); % azi 포인트 확률 밀도함수
@@ -71,14 +65,6 @@ xlabel('Azimuth [deg]');
 ylabel('PDF');
 title('MIX Azimuth FOV');
 
-figure;
-histogram(FOV.el.all,100,'Normalization','pdf');
-grid on; hold on;
-xline(FOV.el.core(1),'r--');
-xline(FOV.el.core(2),'r--');
-xlabel('Elevation [deg]');
-ylabel('PDF');
-title('MIX Elevation FOV');
 
 
 fprintf('\n========== MIX FOV VALIDATION ==========\n');
