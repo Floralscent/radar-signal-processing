@@ -17,7 +17,7 @@
 * Constant false alarm rate: Threshold를 고정시키지 않고  유동적으로 변화 시켜 peak를 검출하고 이 peak의 range, doppler index를 계산하는 레이더 내부처리 과정에 대한 학습을 진행했습니다.
 
 ### 결과 (Experimental Results)
-* **Azimuth FOV**: +- 45도
+* **Azimuth FOV**: Azimuth($\pm 45^\circ$)
 * **신규 레이더 데이터 처리 코드 및 빔포밍 코드 작성 성공**
 * **표준 파이프라인 구축**: 신규 레이더 운용을 위한 신호 처리 표준 파이프라인을 구축하여 연구실 자산화에 기여했습니다.
 
@@ -139,7 +139,7 @@
 
 <tr>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
-      <img src="./Human_Target_SAR\img\layout1.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
+      <img src="./Human_Target_SAR\img\layout.png" width="100%" style="aspect-ratio: 4/3; object-fit: contain;"/>
       <br/><br/>
       <strong style="font-size: 1.2em;">SAR 구동을 위한 회로도</strong>
     </td>
