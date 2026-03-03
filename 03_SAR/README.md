@@ -7,10 +7,12 @@
 * Multi-Dimensional FFT Pipeline
     * 1st FFT (Range): Hamming Window를 적용하여 256개 샘플로부터 정밀한 거리 정보 추출
     * 2nd FFT (Doppler): 64개의 Chirp 데이터를 처리하여 타겟의 속도 성분 도출 및 Range-Doppler Map 생성
+
 * MIMO Beamforming & Phase Calibration
     * 8개 채널의 복소 위상 불균형을 해결하기 위해 고정 위상 보정값(`gPhaseCal_complex`)을 적용하여 빔포밍 정밀도 향상
     * Steering Vector 연산을 통해 Azimuth($\pm 45^\circ$)와 Elevation($\pm 15^\circ$)에 대한 3차원 공간 데이터 복원
     * 01 프로젝트들의 1채널 raw 데이터 처리 + 02 프로젝트들의 SAR를 고도화 시킨 경험을 바탕으로 RAW 데이터로 SAR를 구현
+    
 * Slant Range Correction SAR
     * 레이더의 실제 물리적 위치와 측정 거리 사이의 오차($\Delta R$)를 실시간 보정하는 위상 보정(`phase_corr`) 알고리즘 구현
     * Coherent vs Incoherent Sum: 위상 동기 누적(Coherent) 방식을 적용하여 타겟의 초점(Focusing) 성능을 에너지 누적 방식 대비 대폭 개선
