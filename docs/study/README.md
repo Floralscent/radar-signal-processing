@@ -187,6 +187,6 @@ Q=0이면:
 
 
 예제 코드 및 학습은 다음과 같은 자료를 참고했으며 예제 코드를 바꾸고 다양한 시각화 방법을 통해 해당 과정에 대해 학습
-
-칼만 필터는 어렵지 않아 with MATLAB Examples 저)김성필
-Understanding Kalman Filters - MATLAB Youtube
+* 참고 자료
+* 칼만 필터는 어렵지 않아 with MATLAB Examples 저)김성필
+* Understanding Kalman Filters - MATLAB Youtube
