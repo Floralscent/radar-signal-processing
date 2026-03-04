@@ -23,24 +23,37 @@
 
 ---
 ### ① 평균 필터 (Simple Average Filter)
-- 수식: $\bar{x}_{k} = \frac{k-1}{k} \cdot \bar{x}_{k-1} + \frac{1}{k} \cdot x_{k}$
-- >> 시간이 지날수록 새로운 측정값($x_{k}$)을 거의 반영하지 않으며 시스템이 '정적'일 때 가장 정확한 값을 찾아낼 수 있음.
+- 수식:
 
-> ![평균 필터 결과 그래프](./img/Average.jpg)
+$$
+\bar{x}_{k} = \frac{k-1}{k} \bar{x}_{k-1} + \frac{1}{k} x_k
+$$
 
+- 시간이 지날수록 새로운 측정값($x_k$)을 거의 반영하지 않으며, 평균이 일정한 환경에서 수렴함.
+
+![평균 필터 결과 그래프](./img/Average.jpg)
 
 ### ② 이동 평균 필터 (Moving Average Filter)
-- 수식: $\bar{x}_{k} = \bar{x}_{k-1} + \frac{1}{n} \cdot (x_{k} - x_{k-n})$
-- >> 슬라이딩 윈도우 방식을 재귀적으로 구현하여 계산 효율을 향상 ($O(1)$).
+- 수식:
 
-> ![이동 평균 결과 그래프](./img/Moving_Average.jpg)
+$$
+\bar{x}_{k} = \bar{x}_{k-1} + \frac{1}{n}(x_k - x_{k-n})
+$$
+
+- 슬라이딩 윈도우 방식을 재귀적으로 구현하여 계산 효율을 향상 ($O(1)$).
+
+![이동 평균 결과 그래프](./img/Moving_Average.jpg)
 
 ### ③ 1차 저주파 통과 필터 (1st Order LPF)
-- 수식: $\hat{x}_{k} = \alpha \cdot \hat{x}_{k-1} + (1 - \alpha) \cdot z_{k}$
-- >> 최근 데이터에 가중치를 주는 지수 가중 이동 평균 방식. $\alpha$값 설정을 통해 노이즈 제거와 반응성 사이의 Trade-off를 조절하는 것이 핵심.
+- 수식:
 
-> ![LPF 결과 그래프](./img/LPF.jpg)
+$$
+\hat{x}_{k} = \alpha \hat{x}_{k-1} + (1 - \alpha) z_k
+$$
 
+- 최근 데이터에 가중치를 주는 지수 가중 이동 평균 방식.
+
+![LPF 결과 그래프](./img/LPF.jpg)
 -----
 
 ## 🚀 칼만 필터(Kalman Filter)로의 연결
