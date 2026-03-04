@@ -47,9 +47,8 @@
 > ![LPF 결과 그래프](./img/LPF.jpg)
 
 
-plus) ![$\alpha$의 변화](./img/change_alpha.gif)
 
----
+-----
 
 ## 🚀 칼만 필터(Kalman Filter)로의 연결
 
