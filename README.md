@@ -1,11 +1,11 @@
-# Radar Signal Processing and Systems (2023.07 - 2025.12)
+# Radar Signal Processing and Systems (2023.07 - 2024.12)
 
 본 저장소는 숭실대학교 NSPL(Neuro-Engineering and Neural Signal Processing Lab)에서 학부연구생으로 활동하며 수행한 레이더 시스템 설계 및 신호처리 알고리즘 연구 기록을 담고 있습니다.
 
 ## 활동 개요
 * 소속: 숭실대학교 차세대 신호처리 연구실 (NSPL)
 * 역할: 학부연구생
-* 기간: 2023.07 ~ 2025.12
+* 기간: 2023.07 ~ 2024.12
 * 주요 분야: FMCW Radar System, Signal Processing, SAR Imaging, Beamforming
 
 ---
