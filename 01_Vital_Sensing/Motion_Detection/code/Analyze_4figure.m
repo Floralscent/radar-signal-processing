@@ -100,9 +100,7 @@ for scan_idx=1:size(radar_data,3)
         else
             rang_vel(range_bin,scan_idx) = vel_max;
         end
-        % if문을 작성하세요. vel_min과 vel_max의 절대값을 비교하여,
-        % vel_min의 절대값이 크면, rang_vel(range_bin,scan_idx)에는 vel_min
-        % 그렇지 않으면 vel_max가 저장
+       
     end    
 end
 
