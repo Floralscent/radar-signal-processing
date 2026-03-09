@@ -23,7 +23,7 @@
 * 상세 보기: [./01_Vital_Sensing](./01_Vital_Sensing)
 
 ### 2. 신규 레이더 빔포밍 및 인간 타겟 SAR (Beamforming and Target)
-안테나 배열을 활용한 빔포밍 기술을 습득하고, 이를 확장하여 동적인 인간 타겟을 영상화하는 기술을 연구했습니다.
+안테나 배열을 활용한 빔포밍 기술을 습득하고 FOV를 검증하며, 이를 확장하여 정적인 인간 타겟을 영상화하는 기술을 연구했습니다.
 
 * 주요 내용: 
     * DoA(Direction of Arrival) 추정 알고리즘 및 FOV(Field of View) 검증
