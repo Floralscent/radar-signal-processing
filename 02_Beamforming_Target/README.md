@@ -22,6 +22,14 @@
 * **표준 파이프라인 구축**: 신규 레이더 운용을 위한 신호 처리 표준 파이프라인을 구축하여 연구실 자산화에 기여했습니다.
 - 해당 레이더로 Azimuth($\pm 60^\circ$) 구간을 5도씩 변경하여 평균 25스캔을 측정한 결과를 포인트 클라우드로 변경후 PDF로 시각화 하여 FOV를 파악하고, Azimuth($\pm 45^\circ$)을 벗어나는 경우 잘못된 각도에 포인트가 생김으로 신뢰 구간을 넘기지 않고 사용해야 함을 확인할 수 있었습니다.
 
+### [Radar Signal Processing Pipeline]
+```mermaid
+graph TD
+    A[Hardware Processing <br/> 2nd FFT, NCI, CFAR] --> B[Radar Data & <br/> Phase Calibration]
+    B --> C[Bartlett <br/> ]
+    C --> D[Azi - Range Point <br/> Detection]
+
+```
 
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
@@ -61,7 +69,14 @@
 
 * **후속 연구 진행**:RAW 데이터를 제공하는 레이더로 PointCloud가 아닌 SAR 프로젝트로 이어졌습니다.
 
-
+### [Radar Signal Processing Pipeline]
+```mermaid
+graph TD
+    A[Hardware Processing <br/> 2nd FFT, NCI, CFAR] --> B[Radar Data & <br/> Phase Calibration]
+    B --> C[Digital Beamforming]
+    C --> D[Linear Stage <br/> Velocity Correction]
+    D --> E[Point Cloud Construction & <br/> DBSCAN Clustering]
+```
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
     <td align="center" style="width: 33.33%; border: none; vertical-align: middle; padding: 10px;">
