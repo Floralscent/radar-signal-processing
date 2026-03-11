@@ -26,6 +26,36 @@
 
 * 데이터 자산화: 위상 보정 및 이미지 복원 프로세스를 모듈화하여 후속 연구자들이 재사용 가능한 가이드라인 형태로 정리했습니다.
 
+### [Radar Signal Processing Pipeline]
+```mermaid
+graph TD
+    %% Phase 1: Signal Preprocessing
+    subgraph "Phase 1: Signal Preprocessing (Time-Frequency Analysis)"
+        A[Raw H5 Data <br/> 256 Samples / 64 Chirps] --> B[1st FFT <br/>]
+        B --> C[2nd FFT <br/>]
+        C --> D[RD Cube Construction <br/> Complex Result]
+    end
+
+    %% Phase 2: Spatial Processing
+    subgraph "Phase 2: Digital Beamforming"
+        D --> E[Phase Calibration <br/> gPhaseCal_complex]
+        E --> F[Steering Vector Design <br/> Azimuth/Elevation Grid]
+        F --> G{Spatial Processing}
+        G -->|Beamforming| H[Complex BF Map <br/>]
+    end
+
+    %% Phase 3: Imaging Reconstruction
+    subgraph "Phase 3: SAR Reconstruction (Phase Correction)"
+        H --> I[Slant Range Calculation <br/> deltaR = R_now - R_phys]
+        I --> J[Phase Correction <br/> exp -j*4*pi*deltaR/lambda]
+        J --> K{Integration Method}
+        K -->|Coherent| L[Coherent SAR Accumulation <br/>]
+        K -->|Incoherent| M[Incoherent Power Sum <br/> Smearing]
+    end
+
+    %% Final Result
+    L --> N[Target Focused SAR Result <br/> 3.05m ~ 3.25m 합산]
+```
 
 ## 2. 실험 결과 (Experimental Results)
 
