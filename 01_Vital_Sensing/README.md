@@ -15,6 +15,17 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부에서
 * 접촉식 호흡 센서를 통한 Ground Truth 데이터와 레이더 산출 데이터를 실시간으로 비교 분석했습니다.
 * 분석 결과, 상관계수(**Correlation**) **0.84**와 평균 오차(**MSE**) **0.2183**를 달성하며 비접촉 방식임에도 높은 정확도로 호흡률을 측정할 수 있음을 검증했습니다.
 
+### [Radar Signal Processing Pipeline]
+```mermaid
+graph TD
+    A[Raw Radar Data <br/> 256 Samples, 64 Chirps] --> B[1st FFT]
+    B --> C[Select Target Range Bin <br/> 1m 지점]
+    C --> D[Phase Extraction <br/> Arctan 연산]
+    D --> E[Filter <br/> 0.1 ~ 0.4 Hz]
+    E --> F[Zero-crossing Detection]
+    F --> G[Calculate Respiration Rate <br/> RESP_RR vs Ground Truth]
+```
+
 <table style="width: 100%;">
   <tr>
     <td align="center" style="width: 50%; border: none; padding: 10px;">
@@ -52,6 +63,18 @@ FMCW 레이더의 위상(Phase) 변화를 정밀하게 추적하여 흉부에서
 * **2D FFT Analysis**: Fast-time FFT와 Slow-time FFT를 결합한 2차 FFT 처리를 통해 타겟의 거리(Range)와 도플러 속도(Doppler) 정보를 동시에 추출했습니다.
 * **Time-Frequency Visualization**: 신호 처리 단계별 주파수 특성을 확인하기 위해 1차 및 2차 FFT 결과를 스펙트로그램으로 시각화하여 움직임의 연속성을 분석했습니다.
 * **Target Tracking**: Range-Velocity Map을 활용하여 시간에 따른 타겟의 이동 방향과 속도 변화 패턴을 성공적으로 추적했습니다.
+
+### [Radar Signal Processing Pipeline]
+```mermaid
+graph TD
+    A[Raw Radar Data <br/> 256 Samples, 64 Chirps] --> B[1st FFT]
+    B --> C{Signal Component}
+    C -->|Magnitude| D[Range Spectrogram <br/> 1st FFT]
+    C -->|Phase| E[Phase Analysis]
+    D --> F[2nd FFT]
+    F --> G[Doppler Map & <br/> Range Spectrogram 2nd FFT]
+    G --> H[Range-Velocity Map]
+```
 
 <table style="width: 100%;">
   <tr>
