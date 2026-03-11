@@ -67,11 +67,16 @@ graph TD
 ### [Radar Signal Processing Pipeline]
 ```mermaid
 graph TD
-    A[Raw Radar Data <br/> 256 Samples, 64 Chirps] --> B[1st FFT]
-    B --> C{Signal Component}
-    C -->|Magnitude| D[Range Spectrogram <br/> 1st FFT]
-    C -->|Phase| E[Phase Analysis]
-    D --> F[2nd FFT]
+    A[Raw Radar Data <br/> 256 Samples, 64 Chirps] --> B[1st FFT <br/>]
+    B --> C{Complex Result}
+    
+    %% 시각화/분석 분기
+    C -->|abs| D[Range Spectrogram <br/> 1st FFT]
+    C -->|angle| E[Phase Analysis]
+    
+    %% 연산 흐름 (복소수 데이터 유지)
+    C --> F[2nd FFT <br/>]
+    
     F --> G[Doppler Map & <br/> Range Spectrogram 2nd FFT]
     G --> H[Range-Velocity Map]
 ```
