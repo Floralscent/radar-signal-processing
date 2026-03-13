@@ -144,3 +144,5 @@
 * 숭실대학교 신호처리 연구실 교육 자료
 * TI사 The fundamentals of millimeter wave radar sensors
 * 곽영길, ⌜레이더 시스템 공학⌟, 청문각(2017)
+📄 **[Detailed Radar Theory & Signal Processing (PDF)](./docs/img/FMCW_Radar_Theory.pdf)**
+>본 페이지의 기반이 된 레이더 시스템 이론 및 수식 모델링 정리 자료입니다.
