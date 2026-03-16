@@ -62,8 +62,6 @@ graph TD
 ### 신호 처리 파이프라인
 * **2D FFT Analysis**: Fast-time FFT와 Slow-time FFT를 결합한 2차 FFT 처리를 통해 타겟의 거리(Range)와 도플러 속도(Doppler) 정보를 동시에 추출했습니다.
 * **Time-Frequency Visualization**: 신호 처리 단계별 주파수 특성을 확인하기 위해 1차 및 2차 FFT 결과를 스펙트로그램으로 시각화하여 움직임의 연속성을 분석했습니다.
-* **Target Tracking**: Range-Velocity Map을 활용하여 시간에 따른 타겟의 이동 방향과 속도 변화 패턴을 성공적으로 추적했습니다.
-
 ### [Radar Signal Processing Pipeline]
 ```mermaid
 graph TD
