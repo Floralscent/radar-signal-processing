@@ -14,7 +14,7 @@
     * 01 프로젝트들의 1채널 raw 데이터 처리 + 02 프로젝트들의 SAR를 고도화 시킨 경험을 바탕으로 RAW 데이터로 SAR를 구현
     
 * Slant Range Correction SAR
-    * 레이더의 실제 물리적 위치와 측정 거리 사이의 오차($\Delta R$)를 실시간 보정하는 위상 보정(`phase_corr`) 알고리즘 구현
+    * 레이더의 실제 물리적 위치와 측정 거리 사이의 오차($\Delta R$)를 보정하는 위상 보정(`phase_corr`) 알고리즘 구현
     * Coherent vs Incoherent Sum: 위상 동기 누적(Coherent) 방식을 적용하여 타겟의 초점(Focusing) 성능을 에너지 누적 방식 대비 대폭 개선
 
 
