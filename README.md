@@ -17,7 +17,7 @@
 
 * 주요 내용: 
     * FMCW 레이더 시스템 파라미터 설계 및 분석
-    * Phase Extraction 알고리즘을 활용한 실시간 호흡 및 움직임 측정
+    * Phase Extraction 알고리즘을 활용한 호흡 및 움직임 측정
     * FFT 및 Bandpass Filter를 이용한 신호 정제
 
 * 상세 보기: [./01_Vital_Sensing](./01_Vital_Sensing)
